@@ -12,18 +12,14 @@
     menu li {
         display: inline;
     }
-
 </style>
 
-
 </head>
-
-
 
 <body>
 <header>
     <menu>
-        <li><a href="{{ url_for('homepage.homepage') }}">Home</a></li>
+        <li><a href="{{ url_for('homepage.index') }}">Home</a></li>
         <li><a href="{{ url_for('homepage.about') }}">About</a></li>
         <li><a href="{{ url_for('homepage.users') }}">Users</a></li>
     </menu>
@@ -32,12 +28,12 @@
 
 <div>
 <!-- Your page content -->
-
     {% block content %}
     {% endblock %}
 </div>
+
 <footer>
-    Footer Goes Here
+    By: Noe Condado-Lino
 </footer>
 </body>
 </html>
