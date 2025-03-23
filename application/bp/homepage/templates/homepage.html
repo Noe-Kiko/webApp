@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+{% block content %}
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to Our Flask Web Application</h1>
+            <p class="lead">This is a simple Flask web application demonstrating various web development concepts.</p>
+            <hr class="my-4">
+            <p>Explore Other Pages:</p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="{{ url_for('homepage.users') }}" class="text-decoration-none">View Users</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{ url_for('homepage.about') }}" class="text-decoration-none">About Page</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
