@@ -15,7 +15,7 @@ COPY . .
 
 # Set environment variables
 ENV FLASK_APP=wsgi.py
-ENV FLASK_ENV=production
+ENV FLASK_DEBUG=0
 
 # Initialize the database
 RUN python query.py
