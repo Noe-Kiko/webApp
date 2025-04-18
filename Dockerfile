@@ -1,11 +1,3 @@
-# syntax=docker/dockerfile:1
-
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Dockerfile reference guide at
-# https://docs.docker.com/go/dockerfile-reference/
-
-# Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
-
 # Use Python 3.9 as base image
 FROM python:3.9-slim
 
@@ -25,8 +17,8 @@ COPY . .
 ENV FLASK_APP=wsgi.py
 ENV FLASK_ENV=production
 
-# Expose port 5000
-EXPOSE 5000
+# Initialize the database
+RUN python query.py
 
-# Use gunicorn as the production server
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app"]
+# Expose port 8000
+EXPOSE 8000
