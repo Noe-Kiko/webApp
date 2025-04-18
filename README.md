@@ -2,9 +2,11 @@ Simple WebApp made by Noe Condado-Lino
 
 Steps needed to run the applicaiton
 
-1. First you'll want to open up your terminal
+1. First you'll want to open up your terminal and change directory to desktop
+      
+         cd desktop
 
-2. Click on the following URL: https://github.com/Noe-Kiko/webApp
+2. After changing directory click on the following URL: https://github.com/Noe-Kiko/webApp
 
 3. After clicking the URL, you will see a green button named "CODE", you'll want to click that button, click the SSH tab
 and then you'll want to copy the content to the clipboard
@@ -19,18 +21,21 @@ and then you'll want to copy the content to the clipboard
         
         conda activate "webApp"
 
-6. Install the necessary dependencies
+6. Change directory towards the git project you had just cloned
+
+7. After changing to project's directory install the necessary dependencies
 
         pip install -r requirements.txt
 
-7. Initialize the database
+8. Initialize the database
 
          python query.py
 
-8. Run the application (NOTE: YOU MUST INITIALIZE DATABASE TO VIEW USERS ON APPLICATION)
+9. Run the application (NOTE: YOU MUST INITIALIZE DATABASE TO VIEW USERS ON APPLICATION)
 
          python wsgi.py
-9. Access the application
+
+10. Access the application
    
     Open your browser and go to: http://127.0.0.1:5000
     
